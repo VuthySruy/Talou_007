@@ -38,11 +38,11 @@ public class CharacterMovementHandler : NetworkBehaviour
         characterAnimator = GetComponentInChildren<Animator>();
 
         //characterAnimator = GetComponent<Animator>();
-        helmetAnimator = GetComponent<Animator>();
-        headAnimator = GetComponent<Animator>();
-        upperBodyAnimator = GetComponent<Animator>();
-        lowerBodyAnimator = GetComponent<Animator>();
-        feetAnimator = GetComponent<Animator>();
+        helmetAnimator = GetComponentInChildren<Animator>();
+        headAnimator = GetComponentInChildren<Animator>();
+        upperBodyAnimator = GetComponentInChildren<Animator>();
+        lowerBodyAnimator = GetComponentInChildren<Animator>();
+        feetAnimator = GetComponentInChildren<Animator>();
 
 
 
