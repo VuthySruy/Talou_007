@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class CharacterInputHandler : MonoBehaviour
 {
     Vector2 moveInputVector = Vector2.zero;
-    Vector2 viewInputVector = Vector2.zero;
+    //Vector2 viewInputVector = Vector2.zero;
+
+
     bool isJumpButtonPressed = false;
     bool isFireButtonPressed = false;
     bool isGrenadeFireButtonPressed = false;
@@ -38,8 +40,8 @@ public class CharacterInputHandler : MonoBehaviour
             return;
 
         //View input
-        viewInputVector.x = Input.GetAxis("Mouse X");
-        viewInputVector.y = Input.GetAxis("Mouse Y") * -1; //Invert the mouse look
+        //viewInputVector.x = Input.GetAxis("Mouse X");
+        //viewInputVector.y = Input.GetAxis("Mouse Y") * -1; //Invert the mouse look
 
         //Move input
         moveInputVector.x = Input.GetAxis("Horizontal");
@@ -62,7 +64,7 @@ public class CharacterInputHandler : MonoBehaviour
             isGrenadeFireButtonPressed = true;
 
         //Set view
-        localCameraHandler.SetViewInputVector(viewInputVector);
+        //localCameraHandler.SetViewInputVector(viewInputVector);
 
     }
 

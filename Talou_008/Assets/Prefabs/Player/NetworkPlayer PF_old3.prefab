@@ -178,7 +178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8609938973519135566
 Transform:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -632,9 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedddce8203d2204b86f02bb261b6bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 8054853945983303956}
-  offset: {x: 0, y: 5, z: -5}
-  smoothSpeed: 5
+  cameraAnchorPoint: {fileID: 8609938973519135566}
   localCamera: {fileID: 7230795862830266498}
 --- !u!1 &2284220096096563108
 GameObject:
@@ -1091,7 +1089,7 @@ GameObject:
   - component: {fileID: 613021797144884349}
   - component: {fileID: 5358983572124071296}
   m_Layer: 0
-  m_Name: NetworkPlayer PF
+  m_Name: NetworkPlayer PF_old3
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1173,7 +1171,7 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: 913e1b08620d21841b5a2c4a29553dd7
+    RawGuidValue: 03a5f3950add9d041b936cba8bdd9ee5
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 8439091692384082190}
@@ -1236,12 +1234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  characterAnimator: {fileID: 0}
-  helmetAnimator: {fileID: 0}
-  headAnimator: {fileID: 0}
-  upperBodyAnimator: {fileID: 0}
-  lowerBodyAnimator: {fileID: 0}
-  feetAnimator: {fileID: 0}
+  characterAnimator: {fileID: 4562118012738405354}
+  speed: 5
+  rotationSpeed: 5
 --- !u!114 &8954754819099828064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,10 +2324,6 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 3695826389669422617}
-    - target: {fileID: 7036213049465896255, guid: 3254df9a5fe29444380e8a070dd92fe2, type: 3}
-      propertyPath: m_Name
-      value: Armature_Zin
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 3254df9a5fe29444380e8a070dd92fe2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3254df9a5fe29444380e8a070dd92fe2, type: 3}
@@ -2374,9 +2365,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4961630352945234695}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14a9e187fc7029046a684200faf66f92, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1b80aae488c13bb4c85e8792949d7cba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2647,7 +2638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2379902543376957109, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9c47ef068abce44afbb23a75a3d1c0, type: 3}

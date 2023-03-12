@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,17 @@ public class CharacterMovementHandler : NetworkBehaviour
 {
     [Header("Animation")]
     public Animator characterAnimator;
+    public Animator helmetAnimator;
+    public Animator headAnimator;
+    public Animator upperBodyAnimator;
+    public Animator lowerBodyAnimator;
+    public Animator feetAnimator;
 
     bool isRespawnRequested = false;
 
     float walkSpeed = 0;
+
+    GameObject helmetObject;
 
     //Other components
     NetworkCharacterControllerPrototypeCustom networkCharacterControllerPrototypeCustom;
@@ -18,17 +26,33 @@ public class CharacterMovementHandler : NetworkBehaviour
     NetworkInGameMessages networkInGameMessages;
     NetworkPlayer networkPlayer;
 
+
     private void Awake()
     {
         networkCharacterControllerPrototypeCustom = GetComponent<NetworkCharacterControllerPrototypeCustom>();
         hpHandler = GetComponent<HPHandler>();
         networkInGameMessages = GetComponent<NetworkInGameMessages>();
         networkPlayer = GetComponent<NetworkPlayer>();
+
+
+        characterAnimator = GetComponentInChildren<Animator>();
+
+        //characterAnimator = GetComponent<Animator>();
+        helmetAnimator = GetComponent<Animator>();
+        headAnimator = GetComponent<Animator>();
+        upperBodyAnimator = GetComponent<Animator>();
+        lowerBodyAnimator = GetComponent<Animator>();
+        feetAnimator = GetComponent<Animator>();
+
+
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        
+
     }
 
     public override void FixedUpdateNetwork()
@@ -49,8 +73,10 @@ public class CharacterMovementHandler : NetworkBehaviour
         //Get the input from the network
         if (GetInput(out NetworkInputData networkInputData))
         {
+            
+
             //Rotate the transform according to the client aim vector
-            transform.forward = networkInputData.aimForwardVector;
+            //transform.forward = networkInputData.aimForwardVector;
 
             //Cancel out rotation on X axis as we don't want our character to tilt
             Quaternion rotation = transform.rotation;
@@ -59,14 +85,60 @@ public class CharacterMovementHandler : NetworkBehaviour
 
             //Move
             Vector3 moveDirection = transform.forward * networkInputData.movementInput.y + transform.right * networkInputData.movementInput.x;
-            moveDirection.Normalize();
+            //moveDirection.Normalize();
+
+            if (networkInputData.movementInput.y != 0)
+            {
+                characterAnimator.SetBool("IsMoving", true);
+                helmetAnimator.SetBool("IsMoving", true);
+                headAnimator.SetBool("IsMoving", true);
+                upperBodyAnimator.SetBool("IsMoving", true);
+                lowerBodyAnimator.SetBool("IsMoving", true);
+                feetAnimator.SetBool("IsMoving", true);
+
+            }
+
+            else
+            {
+                characterAnimator.SetBool("IsMoving", false);
+                helmetAnimator.SetBool("IsMoving", false);
+                headAnimator.SetBool("IsMoving", false);
+                upperBodyAnimator.SetBool("IsMoving", false);
+                lowerBodyAnimator.SetBool("IsMoving", false);
+                feetAnimator.SetBool("IsMoving", false);
+            }
+
+          
+
 
             networkCharacterControllerPrototypeCustom.Move(moveDirection);
 
+
+            /*
+            networkCharacterControllerPrototypeCustom.Move(velocity * Time.deltaTime);
+
+            if (moveInputVector != Vector3.zero)
+            {
+                characterAnimator.SetBool("IsMoving", true);
+                Quaternion toRotation = Quaternion.LookRotation(moveInputVector, Vector3.up);
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            }
+            else
+            {
+                characterAnimator.SetBool("IsMoving", false);
+            }
+
+
+            */
+
+
+
             //Jump
-            if(networkInputData.isJumpPressed)
+            if (networkInputData.isJumpPressed)
                 networkCharacterControllerPrototypeCustom.Jump();
 
+            
             Vector2 walkVector = new Vector2(networkCharacterControllerPrototypeCustom.Velocity.x, networkCharacterControllerPrototypeCustom.Velocity.z);
             walkVector.Normalize();
 
@@ -78,6 +150,7 @@ public class CharacterMovementHandler : NetworkBehaviour
             //Check if we've fallen off the world.
             CheckFallRespawn();
         }
+
 
     }
 

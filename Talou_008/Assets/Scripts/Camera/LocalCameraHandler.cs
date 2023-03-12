@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class LocalCameraHandler : MonoBehaviour
 {
+    [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private float smoothSpeed = 0.125f;
+
+
+
+
+    /*
     public Transform cameraAnchorPoint;
 
     //Input
@@ -12,10 +20,12 @@ public class LocalCameraHandler : MonoBehaviour
     //Rotation
     float cameraRotationX = 0;
     float cameraRotationY = 0;
+    */
 
     //Other components
     NetworkCharacterControllerPrototypeCustom networkCharacterControllerPrototypeCustom;
     public Camera localCamera;
+
 
     private void Awake()
     {
@@ -23,6 +33,16 @@ public class LocalCameraHandler : MonoBehaviour
         networkCharacterControllerPrototypeCustom = GetComponentInParent<NetworkCharacterControllerPrototypeCustom>();
     }
 
+    private void LateUpdate()
+    {
+        Vector3 desiredPosition = target.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = smoothedPosition;
+
+        transform.LookAt(target);
+    }
+
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -64,4 +84,7 @@ public class LocalCameraHandler : MonoBehaviour
             GameManager.instance.cameraViewRotation.y = cameraRotationY;
         }
     }
+
+    */
+
 }
