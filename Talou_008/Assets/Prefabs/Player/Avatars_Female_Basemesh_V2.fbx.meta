@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 3254df9a5fe29444380e8a070dd92fe2
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Avatars_Female_Basemesh_V2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Hips
+      parentName: Armature
+      position: {x: -0, y: 1, z: 7.389644e-15}
+      rotation: {x: -0, y: 0, z: 1, w: -0.0000000754979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftUpLeg
+      parentName: Avatar_Hips
+      position: {x: 0.0891, y: 0.06270004, z: 0}
+      rotation: {x: 0.011227106, y: 0.00000007547405, z: 8.474083e-10, w: 0.999937}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_LeftLeg
+      parentName: Avatar_LeftUpLeg
+      position: {x: -0.0000000031769032, y: 0.44889957, z: -0.0000000020468838}
+      rotation: {x: -0.023604458, y: 1.9092316e-11, z: -0.0000000035637227, w: 0.9997214}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_LeftFoot
+      parentName: Avatar_LeftLeg
+      position: {x: 3.0466654e-10, y: 0.40713438, z: 6.3836364e-10}
+      rotation: {x: 0.0000000047417634, y: 0.8404748, z: 0.5418507, w: -0.00000051227767}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_LeftToeBase
+      parentName: Avatar_LeftFoot
+      position: {x: 0.000000004615324, y: 0.14388935, z: -0.0000000048975832}
+      rotation: {x: -0.22324285, y: -0.00000035797603, z: -0.00000038795898, w: 0.97476286}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_LeftToeBase_end
+      parentName: Avatar_LeftToeBase
+      position: {x: -0, y: 0.14388934, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightUpLeg
+      parentName: Avatar_Hips
+      position: {x: -0.0891, y: 0.06270004, z: 0}
+      rotation: {x: 0.011227106, y: 0.00000007547405, z: 8.474083e-10, w: 0.999937}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_RightLeg
+      parentName: Avatar_RightUpLeg
+      position: {x: -0.0000000031769032, y: 0.44889957, z: -3.3730202e-10}
+      rotation: {x: -0.023604458, y: 1.9092316e-11, z: -0.0000000035637227, w: 0.9997214}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_RightFoot
+      parentName: Avatar_RightLeg
+      position: {x: 3.0466654e-10, y: 0.40713438, z: 5.529985e-10}
+      rotation: {x: -0.0000000024110334, y: 0.8404748, z: 0.5418507, w: 0.0000006556159}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_RightToeBase
+      parentName: Avatar_RightFoot
+      position: {x: 0.0000000016279932, y: 0.14388935, z: -0.0000000061712218}
+      rotation: {x: -0.2232428, y: 0.00015943682, z: 0.0006945933, w: 0.9747626}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Avatar_RightToeBase_end
+      parentName: Avatar_RightToeBase
+      position: {x: -0, y: 0.14388932, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Spine
+      parentName: Avatar_Hips
+      position: {x: -0, y: -0.07, z: 0}
+      rotation: {x: -0, y: 0, z: 1, w: -0.0000000754979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Spine1
+      parentName: Avatar_Spine
+      position: {x: -0, y: 0.14078552, z: 0}
+      rotation: {x: 9.7108296e-15, y: -5.38784e-40, z: -1.2325952e-32, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_Spine2
+      parentName: Avatar_Spine1
+      position: {x: -0, y: 0.14078559, z: 0}
+      rotation: {x: 9.710829e-15, y: -5.38784e-40, z: -1.2325953e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftShoulder
+      parentName: Avatar_Spine2
+      position: {x: -0.07, y: 0.11431442, z: 0}
+      rotation: {x: -0.7071067, y: 0.7071068, z: 7.484757e-15, w: -0.00000010677015}
+      scale: {x: 1, y: 0.9999997, z: 1}
+    - name: Avatar_LeftArm
+      parentName: Avatar_LeftShoulder
+      position: {x: -0, y: 0.107072465, z: 0}
+      rotation: {x: 0.018284008, y: 0.018283859, z: 0.0003369305, w: 0.9996656}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_LeftForeArm
+      parentName: Avatar_LeftArm
+      position: {x: -0.00000021178275, y: 0.2732376, z: 0.000000007152557}
+      rotation: {x: -0.036981568, y: -0.036770985, z: 0.005073054, w: 0.99862635}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Avatar_LeftHand
+      parentName: Avatar_LeftForeArm
+      position: {x: 0.0000000507742, y: 0.26717213, z: 5.919202e-10}
+      rotation: {x: -0.044290118, y: -0.04334492, z: -0.0126519, w: 0.9979978}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Avatar_LeftHandIndex1
+      parentName: Avatar_LeftHand
+      position: {x: -0.007790655, y: 0.092347264, z: -0.027574837}
+      rotation: {x: 0.048222166, y: 0.06226276, z: 0.008147525, w: 0.9968609}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandIndex2
+      parentName: Avatar_LeftHandIndex1
+      position: {x: -0.00000022981327, y: 0.051838588, z: 0.0000000010833173}
+      rotation: {x: 0.0006618791, y: 0.00000004342739, z: -0.000000767691, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Avatar_LeftHandIndex3
+      parentName: Avatar_LeftHandIndex2
+      position: {x: -0.000000019711456, y: 0.03415149, z: -0.0000000012097462}
+      rotation: {x: -0.0024983508, y: 0.00000025740422, z: -0.0000013528271, w: 0.9999969}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandIndex4
+      parentName: Avatar_LeftHandIndex3
+      position: {x: 0.000000015911695, y: 0.021273766, z: 0.0000000025673943}
+      rotation: {x: -0.00000011362094, y: -0.00000011175949, z: 1.8252067e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandIndex4_end
+      parentName: Avatar_LeftHandIndex4
+      position: {x: -0, y: 0.021273682, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandMiddle1
+      parentName: Avatar_LeftHand
+      position: {x: -0.0075357505, y: 0.0889655, z: -0.0017207932}
+      rotation: {x: 0.06234181, y: 0.06237288, z: 0.0072660376, w: 0.9960775}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Avatar_LeftHandMiddle2
+      parentName: Avatar_LeftHandMiddle1
+      position: {x: 0.00000003102491, y: 0.04976079, z: 0.0000000017302226}
+      rotation: {x: 0.000008173678, y: 0.00000007215371, z: -0.0000000037098444, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandMiddle3
+      parentName: Avatar_LeftHandMiddle2
+      position: {x: 0.00000002663949, y: 0.038652766, z: 0.000000002212182}
+      rotation: {x: -0.000008597387, y: -0.000000014317255, z: -1.674628e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandMiddle4
+      parentName: Avatar_LeftHandMiddle3
+      position: {x: 0.000000026221038, y: 0.0200562, z: 8.640927e-10}
+      rotation: {x: 0.00023513992, y: -0.00000059134044, z: -0.101706035, w: 0.9948145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandMiddle4_end
+      parentName: Avatar_LeftHandMiddle4
+      position: {x: -0, y: 0.020056272, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandPinky1
+      parentName: Avatar_LeftHand
+      position: {x: 0.00608566, y: 0.08394235, z: 0.051368926}
+      rotation: {x: 0.07423468, y: 0.062454127, z: 0.0065226564, w: 0.99526185}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Avatar_LeftHandPinky2
+      parentName: Avatar_LeftHandPinky1
+      position: {x: 0.00000016607889, y: 0.034953397, z: -5.2065385e-10}
+      rotation: {x: -0.0005177051, y: 0.000000103341264, z: 0.0000009621308, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandPinky3
+      parentName: Avatar_LeftHandPinky2
+      position: {x: 0.00000010404507, y: 0.024257282, z: -0.000000002573106}
+      rotation: {x: 0.0011151109, y: -0.00000021876714, z: 0.0000011423298, w: 0.9999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Avatar_LeftHandPinky4
+      parentName: Avatar_LeftHandPinky3
+      position: {x: -0.000000042601503, y: 0.01779434, z: -0.0000000021073718}
+      rotation: {x: -0.06747744, y: -0.0019533157, z: -0.10166922, w: 0.9925253}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Avatar_LeftHandPinky4_end
+      parentName: Avatar_LeftHandPinky4
+      position: {x: -0, y: 0.017794164, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandRing1
+      parentName: Avatar_LeftHand
+      position: {x: -0.0027757587, y: 0.08825636, z: 0.026631236}
+      rotation: {x: 0.06237208, y: 0.06237222, z: 0.007264081, w: 0.99607563}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Avatar_LeftHandRing2
+      parentName: Avatar_LeftHandRing1
+      position: {x: -0.000000007552582, y: 0.040864673, z: 3.3550804e-10}
+      rotation: {x: 3.6266784e-10, y: 0.000000016255918, z: 0.000000003725292, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandRing3
+      parentName: Avatar_LeftHandRing2
+      position: {x: -0.0000000017150944, y: 0.032635387, z: -4.7562027e-10}
+      rotation: {x: 0.000000074473654, y: 0.00000007447368, z: 1.1818465e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandRing4
+      parentName: Avatar_LeftHandRing3
+      position: {x: -0.000000003946759, y: 0.021207854, z: -6.489336e-10}
+      rotation: {x: 0.00000020177782, y: 0.000000042151175, z: -0.10170526, w: 0.9948146}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_LeftHandRing4_end
+      parentName: Avatar_LeftHandRing4
+      position: {x: -0, y: 0.021207865, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandThumb1
+      parentName: Avatar_LeftHand
+      position: {x: 0.01201596, y: 0.036980778, z: -0.048704408}
+      rotation: {x: -0.08024137, y: 0.05295006, z: -0.08498059, w: 0.99173385}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Avatar_LeftHandThumb2
+      parentName: Avatar_LeftHandThumb1
+      position: {x: -0.00000011116266, y: 0.026647698, z: -0.00000003832807}
+      rotation: {x: 0.03329909, y: 0.0033657067, z: 0.10160713, w: 0.9942615}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_LeftHandThumb3
+      parentName: Avatar_LeftHandThumb2
+      position: {x: 0.00000001572189, y: 0.028859382, z: -0.00000001330488}
+      rotation: {x: 0.0054330886, y: -0.000006472938, z: 0.00005945679, w: 0.9999853}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Avatar_LeftHandThumb4
+      parentName: Avatar_LeftHandThumb3
+      position: {x: -0.000000008494826, y: 0.027438508, z: -0.000000008587885}
+      rotation: {x: 0.000000089442764, y: 0.00000007437737, z: -7.003109e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_LeftHandThumb4_end
+      parentName: Avatar_LeftHandThumb4
+      position: {x: -0, y: 0.027438601, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Neck
+      parentName: Avatar_Spine2
+      position: {x: -0, y: 0.14078552, z: 0}
+      rotation: {x: 9.710829e-15, y: -5.38784e-40, z: -1.2325953e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Head
+      parentName: Avatar_Neck
+      position: {x: -0, y: 0.24235657, z: 0}
+      rotation: {x: 9.710829e-15, y: -5.38784e-40, z: -1.2325953e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_Head_end
+      parentName: Avatar_Head
+      position: {x: -0, y: 0.24235657, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightShoulder
+      parentName: Avatar_Spine2
+      position: {x: 0.07, y: 0.11431442, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_RightArm
+      parentName: Avatar_RightShoulder
+      position: {x: -0, y: 0.10707246, z: 0}
+      rotation: {x: -0.01828401, y: -0.018284012, z: 0.0003369306, w: 0.9996656}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightForeArm
+      parentName: Avatar_RightArm
+      position: {x: -0.000000058114527, y: 0.2732375, z: 0.0000000011920929}
+      rotation: {x: 0.03698157, y: 0.036771137, z: 0.0050730538, w: 0.9986263}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Avatar_RightHand
+      parentName: Avatar_RightForeArm
+      position: {x: 0.00000005366623, y: 0.26717207, z: -0.0000000053635927}
+      rotation: {x: 0.04429013, y: 0.04334476, z: -0.012651903, w: 0.9979978}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Avatar_RightHandIndex1
+      parentName: Avatar_RightHand
+      position: {x: -0.007790508, y: 0.09234723, z: 0.027574865}
+      rotation: {x: -0.048222166, y: -0.062262733, z: 0.008147519, w: 0.9968609}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Avatar_RightHandIndex2
+      parentName: Avatar_RightHandIndex1
+      position: {x: 0.000000051711012, y: 0.05183852, z: 3.1898706e-10}
+      rotation: {x: -0.0006619028, y: 0.000000007786979, z: -0.0000007551084, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Avatar_RightHandIndex3
+      parentName: Avatar_RightHandIndex2
+      position: {x: -0.00000017624814, y: 0.03415146, z: 2.1325831e-10}
+      rotation: {x: 0.0024984116, y: -0.00000015588998, z: -0.0000013524992, w: 0.9999969}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Avatar_RightHandIndex4
+      parentName: Avatar_RightHandIndex3
+      position: {x: 0.000000009314197, y: 0.021273587, z: 0.0000000024199471}
+      rotation: {x: 0.000000054016454, y: 0.00000005401707, z: 1.3753581e-11, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Avatar_RightHandIndex4_end
+      parentName: Avatar_RightHandIndex4
+      position: {x: -0, y: 0.021273682, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandMiddle1
+      parentName: Avatar_RightHand
+      position: {x: -0.007535609, y: 0.08896547, z: 0.001720823}
+      rotation: {x: -0.06234184, y: -0.06237193, z: 0.0072659794, w: 0.99607754}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Avatar_RightHandMiddle2
+      parentName: Avatar_RightHandMiddle1
+      position: {x: -0.000000006357831, y: 0.049760737, z: -1.2830241e-10}
+      rotation: {x: -0.000008166223, y: -0.000000014260893, z: 0.0000000023289144, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandMiddle3
+      parentName: Avatar_RightHandMiddle2
+      position: {x: -0.0000000021325655, y: 0.03865281, z: -4.305548e-10}
+      rotation: {x: 0.000008597388, y: 0.0000000064828782, z: -7.0059117e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandMiddle4
+      parentName: Avatar_RightHandMiddle3
+      position: {x: -0.0000000023844589, y: 0.020056244, z: 1.6339981e-10}
+      rotation: {x: -1.1641758e-10, y: -1.1277905e-10, z: 1.5652627e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandMiddle4_end
+      parentName: Avatar_RightHandMiddle4
+      position: {x: -0, y: 0.020056304, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandPinky1
+      parentName: Avatar_RightHand
+      position: {x: 0.006085793, y: 0.08394232, z: -0.051368892}
+      rotation: {x: -0.074234694, y: -0.06245403, z: 0.0065226587, w: 0.99526185}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Avatar_RightHandPinky2
+      parentName: Avatar_RightHandPinky1
+      position: {x: 0.000000011477602, y: 0.034953363, z: -0.0000000013109956}
+      rotation: {x: 0.0005176944, y: -0.000000055842794, z: 0.0000009640421, w: 0.9999999}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_RightHandPinky3
+      parentName: Avatar_RightHandPinky2
+      position: {x: 0.00000010735885, y: 0.024257407, z: 4.9198207e-10}
+      rotation: {x: -0.0011151109, y: 0.00000012097831, z: 0.0000011422824, w: 0.9999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Avatar_RightHandPinky4
+      parentName: Avatar_RightHandPinky3
+      position: {x: 0.0000001089822, y: 0.017794311, z: -0.000000004333942}
+      rotation: {x: -0.00000005355123, y: -0.000000054947577, z: 1.935696e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandPinky4_end
+      parentName: Avatar_RightHandPinky4
+      position: {x: -0, y: 0.01779419, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandRing1
+      parentName: Avatar_RightHand
+      position: {x: -0.0027756214, y: 0.08825633, z: -0.026631203}
+      rotation: {x: -0.0623721, y: -0.062371902, z: 0.0072640777, w: 0.9960757}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_RightHandRing2
+      parentName: Avatar_RightHandRing1
+      position: {x: -0.00000013910962, y: 0.04086467, z: -0.0000000010019471}
+      rotation: {x: 0.00000001081321, y: -0.000000010260173, z: -0.0000000060535914, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandRing3
+      parentName: Avatar_RightHandRing2
+      position: {x: -0.00000014981615, y: 0.03263551, z: -0.0000000010613417}
+      rotation: {x: -0.00000007447368, y: -0.000000074473675, z: -2.2268754e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandRing4
+      parentName: Avatar_RightHandRing3
+      position: {x: -0.00000015212689, y: 0.021207975, z: -8.879669e-10}
+      rotation: {x: -0.00000014052472, y: -0.00000014052472, z: -1.5591576e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandRing4_end
+      parentName: Avatar_RightHandRing4
+      position: {x: -0, y: 0.021207886, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandThumb1
+      parentName: Avatar_RightHand
+      position: {x: 0.012016107, y: 0.03698074, z: 0.048704423}
+      rotation: {x: 0.08024148, y: -0.052950136, z: -0.084980614, w: 0.9917338}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Avatar_RightHandThumb2
+      parentName: Avatar_RightHandThumb1
+      position: {x: -0.00000017166137, y: 0.026647644, z: -0.00000002416371}
+      rotation: {x: -0.033299148, y: -0.003365535, z: 0.10160718, w: 0.9942615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Avatar_RightHandThumb3
+      parentName: Avatar_RightHandThumb2
+      position: {x: 0.00000005525304, y: 0.028859189, z: 0.000000012544478}
+      rotation: {x: -0.005433208, y: 0.0000062717286, z: 0.000059439943, w: 0.9999853}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Avatar_RightHandThumb4
+      parentName: Avatar_RightHandThumb3
+      position: {x: 0.000000117688906, y: 0.027438626, z: 0.000000001517692}
+      rotation: {x: -0.0000000037309276, y: -3.9790393e-12, z: 7.275954e-12, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Avatar_RightHandThumb4_end
+      parentName: Avatar_RightHandThumb4
+      position: {x: -0, y: 0.027438601, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: F_Feet_BaseMesh
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146036, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: F_Head_BaseMesh
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146036, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: F_Helmet_BaseMesh
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: F_LowerBody_BaseMesh
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146036, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: F_UpperBody_BaseMesh
+      parentName: Avatars_Female_Basemesh_V2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146036, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
