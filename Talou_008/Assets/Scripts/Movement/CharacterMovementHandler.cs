@@ -7,12 +7,16 @@ using Fusion;
 public class CharacterMovementHandler : NetworkBehaviour
 {
     [Header("Animation")]
+
+
     public Animator characterAnimator;
     public Animator helmetAnimator;
     public Animator headAnimator;
     public Animator upperBodyAnimator;
     public Animator lowerBodyAnimator;
     public Animator feetAnimator;
+
+    
 
     bool isRespawnRequested = false;
 
@@ -25,25 +29,27 @@ public class CharacterMovementHandler : NetworkBehaviour
     HPHandler hpHandler;
     NetworkInGameMessages networkInGameMessages;
     NetworkPlayer networkPlayer;
+    CharacterOutfitHandler characterOutfitHandler;
+
 
 
     private void Awake()
     {
+ 
+
         networkCharacterControllerPrototypeCustom = GetComponent<NetworkCharacterControllerPrototypeCustom>();
         hpHandler = GetComponent<HPHandler>();
         networkInGameMessages = GetComponent<NetworkInGameMessages>();
         networkPlayer = GetComponent<NetworkPlayer>();
+        characterOutfitHandler = GetComponent<CharacterOutfitHandler>();
 
 
         characterAnimator = GetComponentInChildren<Animator>();
 
         //characterAnimator = GetComponent<Animator>();
-        helmetAnimator = GetComponentInChildren<Animator>();
-        headAnimator = GetComponentInChildren<Animator>();
-        upperBodyAnimator = GetComponentInChildren<Animator>();
-        lowerBodyAnimator = GetComponentInChildren<Animator>();
-        feetAnimator = GetComponentInChildren<Animator>();
+        
 
+        
 
 
     }
@@ -51,12 +57,18 @@ public class CharacterMovementHandler : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+     
 
     }
 
     public override void FixedUpdateNetwork()
     {
+        helmetAnimator = characterOutfitHandler.playerHelmet.GetComponentInChildren<Animator>();
+        headAnimator = characterOutfitHandler.playerHead.GetComponentInChildren<Animator>();
+        upperBodyAnimator = characterOutfitHandler.playerUpperBody.GetComponentInChildren<Animator>();
+        lowerBodyAnimator = characterOutfitHandler.playerLowerBody.GetComponentInChildren<Animator>();
+        feetAnimator = characterOutfitHandler.playerFeet.GetComponentInChildren<Animator>();
+
         if (Object.HasStateAuthority)
         {
             if (isRespawnRequested)
