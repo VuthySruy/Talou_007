@@ -2782,6 +2782,7 @@ MonoBehaviour:
   upperBodyAnimator: {fileID: 0}
   lowerBodyAnimator: {fileID: 0}
   feetAnimator: {fileID: 0}
+  rotationSpeed: 1000
 --- !u!114 &5358983572124071296
 MonoBehaviour:
   m_ObjectHideFlags: 0
