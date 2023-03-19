@@ -46,10 +46,10 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
             if (isReadyScene)
             {
-                Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+                //Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 
                 //Disable local camera
-                localCameraHandler.gameObject.SetActive(false);
+                //localCameraHandler.gameObject.SetActive(false);
 
                 //Disable UI for local player
                 localUI.SetActive(false);

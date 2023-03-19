@@ -22,7 +22,7 @@ public class CharacterMovementHandler : NetworkBehaviour
 
     bool isRespawnRequested = false;
 
-    float walkSpeed = 1;
+    //float walkSpeed = 1;
 
     GameObject helmetObject;
 

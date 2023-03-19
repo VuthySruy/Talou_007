@@ -18,6 +18,8 @@ public class CharacterInputHandler : MonoBehaviour
     LocalCameraHandler localCameraHandler;
     CharacterMovementHandler characterMovementHandler;
 
+
+
     private void Awake()
     {
         localCameraHandler = GetComponentInChildren<LocalCameraHandler>();
@@ -36,8 +38,8 @@ public class CharacterInputHandler : MonoBehaviour
         if (!characterMovementHandler.Object.HasInputAuthority)
             return;
 
-        if (SceneManager.GetActiveScene().name == "Ready")
-            return;
+        //if (SceneManager.GetActiveScene().name == "Ready")
+        //    return;
 
         //View input
         //viewInputVector.x = Input.GetAxis("Mouse X");
@@ -62,6 +64,18 @@ public class CharacterInputHandler : MonoBehaviour
         //Throw grenade
         if (Input.GetKeyDown(KeyCode.G))
             isGrenadeFireButtonPressed = true;
+
+        //Scoll Camera
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            localCameraHandler.offset.y--;
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            localCameraHandler.offset.y++;
+        }
+
 
         //Set view
         //localCameraHandler.SetViewInputVector(viewInputVector);

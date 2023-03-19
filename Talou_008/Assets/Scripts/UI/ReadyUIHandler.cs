@@ -12,6 +12,8 @@ public class ReadyUIHandler : NetworkBehaviour
     public TextMeshProUGUI buttonReadyText;
     public TextMeshProUGUI countDownText;
 
+    public GameObject setupCharacterCanvas;
+
     bool isReady = false;
 
     Vector3 desiredCameraPosition = new Vector3(0, 5, 20);
@@ -60,7 +62,7 @@ public class ReadyUIHandler : NetworkBehaviour
     void StartGame()
     {
         //Lock the session, so no other client can join
-        Runner.SessionInfo.IsOpen = false;
+        //Runner.SessionInfo.IsOpen = false;
 
         GameObject[] gameObjectsToTransfer = GameObject.FindGameObjectsWithTag("Player");
 
@@ -75,7 +77,10 @@ public class ReadyUIHandler : NetworkBehaviour
         }
 
         //Update scene for the network
-        Runner.SetActiveScene("World1");
+        //Runner.SetActiveScene("World1");
+
+        setupCharacterCanvas.gameObject.SetActive(false);
+
     }
 
     public void OnChangeCharcterHelmet()

@@ -5,8 +5,10 @@ using UnityEngine;
 public class LocalCameraHandler : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    [SerializeField] private Vector3 offset;
+    
     [SerializeField] private float smoothSpeed = 0.125f;
+
+    public Vector3 offset;
 
 
 
