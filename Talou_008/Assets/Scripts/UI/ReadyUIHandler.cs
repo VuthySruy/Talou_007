@@ -64,17 +64,17 @@ public class ReadyUIHandler : NetworkBehaviour
         //Lock the session, so no other client can join
         //Runner.SessionInfo.IsOpen = false;
 
-        GameObject[] gameObjectsToTransfer = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject[] gameObjectsToTransfer = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach (GameObject gameObjectToTransfer in gameObjectsToTransfer)
-        {
-            DontDestroyOnLoad(gameObjectToTransfer);
+        //foreach (GameObject gameObjectToTransfer in gameObjectsToTransfer)
+        //{
+        //    DontDestroyOnLoad(gameObjectToTransfer);
 
             //Check if the player is ready
-            if (!gameObjectToTransfer.GetComponent<CharacterOutfitHandler>().isDoneWithCharacterSelection)
-                Runner.Disconnect(gameObjectToTransfer.GetComponent<NetworkObject>().InputAuthority);
+       //     if (!gameObjectToTransfer.GetComponent<CharacterOutfitHandler>().isDoneWithCharacterSelection)
+        //        Runner.Disconnect(gameObjectToTransfer.GetComponent<NetworkObject>().InputAuthority);
 
-        }
+        //}
 
         //Update scene for the network
         //Runner.SetActiveScene("World1");
@@ -138,7 +138,7 @@ public class ReadyUIHandler : NetworkBehaviour
         if (Runner.IsServer)
         {
             if (isReady)
-                countDownTickTimer = TickTimer.CreateFromSeconds(Runner, 10);
+                countDownTickTimer = TickTimer.CreateFromSeconds(Runner, 1);
             else
             {
                 countDownTickTimer = TickTimer.None;

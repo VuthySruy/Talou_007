@@ -6,7 +6,10 @@ using Fusion;
 
 public class CharacterMovementHandler : NetworkBehaviour
 {
+    
+
     [Header("Animation")]
+
 
 
     public Animator characterAnimator;
@@ -33,7 +36,7 @@ public class CharacterMovementHandler : NetworkBehaviour
     NetworkPlayer networkPlayer;
     CharacterOutfitHandler characterOutfitHandler;
 
-
+ 
 
     private void Awake()
     {
@@ -160,7 +163,7 @@ public class CharacterMovementHandler : NetworkBehaviour
 
 
 
-
+            
 
 
             //Jump
