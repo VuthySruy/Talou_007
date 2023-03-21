@@ -15,8 +15,8 @@ public class CharacterOutfitHandler : NetworkBehaviour
     public GameObject playerLowerBody;
     public GameObject playerFeet;
 
-    [Header("Ready UI")]
-    public Image readyCheckboxImage;
+    //[Header("Ready UI")]
+    //public Image readyCheckboxImage;
 
     [Header("Animation")]
     public Animator characterAnimator;
@@ -69,10 +69,10 @@ public class CharacterOutfitHandler : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        characterAnimator.SetLayerWeight(1, 0.0f);
+        //characterAnimator.SetLayerWeight(1, 0.0f);
 
-        if (SceneManager.GetActiveScene().name != "Ready")
-            return;
+        //if (SceneManager.GetActiveScene().name != "Ready")
+        //    return;
 
         NetworkOutfit newOutfit = networkOutfit;
 
@@ -84,7 +84,7 @@ public class CharacterOutfitHandler : NetworkBehaviour
         newOutfit.feetPrefabID = (byte)Random.Range(0, feetPrefabs.Count);
 
         //Allow ready up animation layer to show
-        characterAnimator.SetLayerWeight(1, 1.0f);
+        //characterAnimator.SetLayerWeight(1, 1.0f);
 
         //Request host to change the outfit, if we have input authority over the object.
         if (Object.HasInputAuthority)
@@ -240,22 +240,26 @@ public class CharacterOutfitHandler : NetworkBehaviour
         if (SceneManager.GetActiveScene().name != "Ready")
             return;
 
+        /*
         if (isDoneWithCharacterSelection)
         {
             characterAnimator.SetTrigger("Ready");
             readyCheckboxImage.gameObject.SetActive(true);
         }
         else readyCheckboxImage.gameObject.SetActive(false);
+        */
     }
+    /*
+   void OnEnable()
+   {
+       SceneManager.sceneLoaded += OnSceneLoaded;
+   }
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name != "Ready")
-            readyCheckboxImage.gameObject.SetActive(false);
-    }
+   void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+   {
+       if (scene.name != "Ready")
+           readyCheckboxImage.gameObject.SetActive(false);
+   }
+   */
 }

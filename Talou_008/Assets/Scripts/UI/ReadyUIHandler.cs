@@ -148,7 +148,7 @@ public class ReadyUIHandler : NetworkBehaviour
 
         NetworkPlayer.Local.GetComponent<CharacterOutfitHandler>().OnReady(isReady);
     }
-
+    
     static void OnCountdownChanged(Changed<ReadyUIHandler> changed)
     {
         changed.Behaviour.OnCountdownChanged();

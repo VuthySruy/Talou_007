@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
+using UnityEngine.UI;
 
 public class CharacterMovementHandler : NetworkBehaviour
 {
@@ -10,7 +11,7 @@ public class CharacterMovementHandler : NetworkBehaviour
 
     [Header("Animation")]
 
-
+    
 
     public Animator characterAnimator;
     public Animator helmetAnimator;
@@ -22,6 +23,8 @@ public class CharacterMovementHandler : NetworkBehaviour
 
     public float rotationSpeed = 1.0f;
 
+
+    //public Toggle isRumbaDancing;
 
     bool isRespawnRequested = false;
 
@@ -40,7 +43,7 @@ public class CharacterMovementHandler : NetworkBehaviour
 
     private void Awake()
     {
- 
+        //isRumbaDancing = GetComponentInChildren<Toggle>();
 
         networkCharacterControllerPrototypeCustom = GetComponent<NetworkCharacterControllerPrototypeCustom>();
         hpHandler = GetComponent<HPHandler>();
@@ -161,9 +164,30 @@ public class CharacterMovementHandler : NetworkBehaviour
             }
 
 
+            if (networkInputData.isDanceButtonPressed)
+            {
+                characterAnimator.SetBool("IsRumbaDancing", true);
+                helmetAnimator.SetBool("IsRumbaDancing", true);
+                headAnimator.SetBool("IsRumbaDancing", true);
+                upperBodyAnimator.SetBool("IsRumbaDancing", true);
+                lowerBodyAnimator.SetBool("IsRumbaDancing", true);
+                feetAnimator.SetBool("IsRumbaDancing", true);
 
 
+            }
+            else
+            {
+                characterAnimator.SetBool("IsRumbaDancing", false);
+                helmetAnimator.SetBool("IsRumbaDancing", false);
+                headAnimator.SetBool("IsRumbaDancing", false);
+                upperBodyAnimator.SetBool("IsRumbaDancing", false);
+                lowerBodyAnimator.SetBool("IsRumbaDancing", false);
+                feetAnimator.SetBool("IsRumbaDancing", false);
+            }
             
+
+
+
 
 
             //Jump

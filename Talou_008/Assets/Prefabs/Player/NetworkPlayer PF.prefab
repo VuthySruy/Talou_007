@@ -2630,7 +2630,6 @@ GameObject:
   - component: {fileID: 2236272646455254436}
   - component: {fileID: 4985779429485557398}
   - component: {fileID: 613021797144884349}
-  - component: {fileID: 4771068794772296948}
   m_Layer: 0
   m_Name: NetworkPlayer PF
   m_TagString: Player
@@ -2726,7 +2725,6 @@ MonoBehaviour:
   - {fileID: 2236272646455254436}
   - {fileID: 4985779429485557398}
   - {fileID: 613021797144884349}
-  - {fileID: 4771068794772296948}
   SimulationBehaviours: []
 --- !u!114 &5931840031319100829
 MonoBehaviour:
@@ -2819,6 +2817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b71c039f81374fa3f1817941fb551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRumbaDancing: {fileID: 8731377810383449075}
 --- !u!114 &4163659810031255665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2922,26 +2921,6 @@ MonoBehaviour:
     _hash: -814817977
   StateHashes: 000000002b1a167c794069558b7cfd670f5f2b886ffd4b18edb2079d
   TriggerHashes: 00000000
---- !u!114 &4771068794772296948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4398370856537798957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8dd87db02de0cf419cbd27ff22c590d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  isRumbaDancing: {fileID: 8731377810383449075}
-  characterAnimator: {fileID: 4562118012738405354}
-  helmetAnimator: {fileID: 0}
-  headAnimator: {fileID: 0}
-  upperBodyAnimator: {fileID: 0}
-  lowerBodyAnimator: {fileID: 0}
-  feetAnimator: {fileID: 0}
 --- !u!1 &4575600897886207595
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,7 +5811,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5367479783760637188}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a25c5b6a3fd74a209f57bf624abc7e4, type: 3}
   m_Name: 
@@ -8693,7 +8672,7 @@ GameObject:
   - component: {fileID: 4092260358926714200}
   - component: {fileID: 8731377810383449075}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: DanceToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8768,9 +8747,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4771068794772296948}
-        m_TargetAssemblyTypeName: DanceButton, Assembly-CSharp
-        m_MethodName: RumbaDance
+      - m_Target: {fileID: 6992278167077286510}
+        m_TargetAssemblyTypeName: CharacterMovementHandler, Assembly-CSharp
+        m_MethodName: FixedUpdateNetwork
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

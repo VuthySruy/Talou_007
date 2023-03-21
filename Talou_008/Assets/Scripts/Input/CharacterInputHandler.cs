@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterInputHandler : MonoBehaviour
 {
@@ -13,17 +14,20 @@ public class CharacterInputHandler : MonoBehaviour
     bool isFireButtonPressed = false;
     bool isGrenadeFireButtonPressed = false;
     bool isRocketLauncherFireButtonPressed = false;
+    bool isDanceButtonPressed = false;
 
     //Other components
     LocalCameraHandler localCameraHandler;
     CharacterMovementHandler characterMovementHandler;
 
-
+    public Toggle isRumbaDancing;
 
     private void Awake()
     {
         localCameraHandler = GetComponentInChildren<LocalCameraHandler>();
         characterMovementHandler = GetComponent<CharacterMovementHandler>();
+
+        isRumbaDancing = GetComponentInChildren<Toggle>();
     }
 
     // Start is called before the first frame update
@@ -65,6 +69,14 @@ public class CharacterInputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
             isGrenadeFireButtonPressed = true;
 
+        //Dancing
+        if (isRumbaDancing.isOn)
+        {
+            isDanceButtonPressed = true;
+        }
+
+
+
         //Scoll Camera
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
@@ -104,11 +116,15 @@ public class CharacterInputHandler : MonoBehaviour
         //Grenade fire data
         networkInputData.isGrenadeFireButtonPressed = isGrenadeFireButtonPressed;
 
+        //dance button data
+        networkInputData.isDanceButtonPressed = isDanceButtonPressed;
+
         //Reset variables now that we have read their states
         isJumpButtonPressed = false;
         isFireButtonPressed = false;
         isGrenadeFireButtonPressed = false;
         isRocketLauncherFireButtonPressed = false;
+        isDanceButtonPressed = false;
 
         return networkInputData;
     }
