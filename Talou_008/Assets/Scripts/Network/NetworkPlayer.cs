@@ -21,6 +21,7 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
     public LocalCameraHandler localCameraHandler;
     public GameObject localUI;
+    public GameObject LocalDanceButton;
 
     //Other components
     NetworkInGameMessages networkInGameMessages;
@@ -53,6 +54,7 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
                 //Disable UI for local player
                 localUI.SetActive(false);
+                LocalDanceButton.SetActive(true);
 
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
@@ -76,6 +78,7 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
                 //Enable UI for local player
                 localUI.SetActive(true);
+                LocalDanceButton.SetActive(false);
 
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
